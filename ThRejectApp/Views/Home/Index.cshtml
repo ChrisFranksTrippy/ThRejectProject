@@ -2,30 +2,137 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<link rel="stylesheet" href="~/Content/input-form.css">
+
+<div id="cover-layer" class="cover-layer">
+    <div class="cover-container">
+        <h3>Reject Number</h3>
+        <h3>20010</h3>
+        <div id="new-ticket" class="cta">Raise Ticket</div>
+        <div class="cta">Print</div>
+        <a href="@Url.Action("Tickets", "TicketGrid")" class="cta">All Tickets</a>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+@Html.Partial("~/Views/Shared/Header.cshtml")
+@Html.Partial("~/Views/Shared/Nav.cshtml")
+
+<main>
+    <div class="container-1">
+        <section class="container-2">
+            <h2>Part Information</h2>
+            <div class="line">
+                <h3>Part Number:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Quanty Rejected:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Part Description:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Value (£):</h3>
+                <input type="text">
+            </div>
+            <div class="line line--checkbox">
+                <input type="text">
+                <h3>Replacement Needed:</h3>
+                <div class="checkbox-container checkbox-container--yn">
+                    <span>Yes</span>
+                    <span>No</span>
+                </div>
+            </div>
+            <div class="line">
+                <h3>Manufacturing Order:</h3>
+                <input type="text">
+            </div>
+        </section>
+        <section class="container-2">
+            <h2>Vendor Information</h2>
+            <div class="line">
+                <h3>Vendor Name:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Buyer Name:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Buyer Email:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Vendor Number:</h3>
+                <input type="text">
+            </div>
+
+            <div class="line line--sub-container">
+                <h3>Address:</h3>
+                <div class="line--sub">
+                    <input type="text" placeholder="Line one">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Line two">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="City">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Post code">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Country code">
+                </div>
+            </div>
+
+        </section>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="container-1">
+        <section class="container-2">
+            <h2>Rejection Information</h2>
+            <div class="line">
+                <h3>Reason Code:</h3>
+                <select>
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="line">
+                <h3>Description</h3>
+                <input type="text">
+            </div>
+        </section>
+        <section class="container-2">
+            <h2>Employee Information</h2>
+            <div class="line">
+                <h3>First Name:</h3>
+                <input type="text" placeholder="First name">
+            </div>
+            <div class="line">
+                <h3>Last Name:</h3>
+                <input id="textbox-width" type="text" placeholder="Last name">
+            </div>
+            <div class="line">
+                <h3>Date of Submittion:</h3>
+                <input class="date-width-fix" type="date">
+            </div>
+        </section>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <div id="submit-button" class="cta">Send Form</div>
+
+    <div class="cta" onclick="window.location.reload(true);">Force Reload</div>
+</main>
+<footer>
+    <p>&copy; Chris Franks</p>
+    <p>P14140100</p>
+</footer>
+
+<script src="~/Scripts/input-form.js"></script>

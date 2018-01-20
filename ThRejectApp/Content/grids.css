@@ -1,0 +1,270 @@
+main {
+	height: calc(100% - 130px);
+	margin-bottom: 5px;
+}
+
+.container-2 {
+	//position: relative;
+	height: 100%;
+	margin: 5px;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+#t-header,
+#t-footer {
+	display: none;
+}
+
+#t-body {
+	overflow-y: auto;
+}
+
+.div-row {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+#t-body .div-row {
+	border: 1px solid black;
+	margin: 9px 0;
+	color: white;
+	font-weight: bold;
+	background-color: #17a2b8;
+}
+
+.div-cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 10px 0px;
+	white-space: nowrap;
+}
+
+#t-body .div-cell:nth-child(odd) {
+	border-right: 1px solid black;
+}
+
+#t-body .div-cell:nth-child(1),
+#t-body .div-cell:nth-child(2) {
+	border-bottom: 1px solid black;
+}
+
+#example-record {
+	padding: 10px;
+	color: black;
+	background-color: lightgray;
+}
+
+.search-icon {
+	display: flex;
+	align-items: center;
+}
+
+.search-icon span  {
+	display: flex;
+	font-size: 1.2em;
+	height: 70%;
+	margin: 0px;
+	padding: 2px 20px;
+}
+
+.fa-close{
+	background-color: #dc3545;
+}
+
+.footer-tools {
+	display: none;
+}
+
+.mobile-search {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: calc(100% - 50px);
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	z-index: -1;
+}
+
+.mobile-search.show {
+	opacity: 1;
+	z-index: 30;
+}
+
+.mobile-search .div-row {
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+	padding: 15px;
+	border-radius: 5px;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+	font-size: 1.1em;
+	transform: scale(0.1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.mobile-search.show .div-row{
+	transform: scale(1);
+}
+
+.mobile-search .div-cell {
+	width: 100%;
+	margin: 5px 0px;
+	padding: 0px;
+	background-color: #007bff;
+	border-radius: 5px;
+}
+
+.mobile-search img {
+	display: none;
+}
+
+.mobile-search p {
+	width: 50%;
+	color: white;
+}
+
+.mobile-search input {
+	width: 40%;
+	padding-left: 2px;
+	font-size: 1.1em;
+	border-radius: 4px;
+}
+
+@media screen and (min-width: 1100px) {
+
+	main {
+		height: calc(100% - 160px);
+		margin: 0px;
+	}
+
+	.container-2 {
+		width: auto;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#t-header {
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 40px;
+		background-color: #aaa;
+	}
+
+	#t-body {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		bottom: 50px;
+	}
+
+	#t-footer {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		height: 50px;
+		background-color: #aaa;
+	}
+
+	#example-record {
+		display: none;
+	}
+
+	.div-table {
+		width: 100%;
+	}
+
+	#t-body .div-cell:nth-child(odd) {
+		border-right: initial;
+	}
+
+	#t-body .div-cell:nth-child(1),
+	#t-body .div-cell:nth-child(2) {
+		border-bottom: initial;
+	}
+
+	.div-row {
+		flex-wrap: nowrap;
+		margin: 0px;
+		border-width: 0px;
+	}
+
+	.div-cell {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		border-width: 0px;
+	}
+
+	#t-header .div-row {
+		height: 100%;
+		margin: 0px;
+		color: black;
+		background-color: #aaa;
+		font-weight: normal;
+		border-width: 0px;
+		border-bottom: 1px solid black;
+	}
+
+	#t-body .div-row {
+		justify-content: flex-start;
+		margin: 0px;
+		padding: 0px;
+		font-weight: normal;
+		color: black;
+		background-color: white;
+		box-shadow: 0px 0px 0px black;
+		border-top-width: 1px;
+		border-radius: 0px;
+	}
+	
+	#t-body .div-row:nth-child(2) {
+		border-top-width: 0px;
+	}
+	
+	#t-body .div-row:nth-child(odd) {
+		background-color: rgb(190,190,190);
+	}
+
+	#t-body .div-cell {
+		margin: 0px;
+		color: black;
+		background-color: transparent;
+		font-weight: normal;
+	}
+	
+	#t-footer .div-row {
+		height: 100%;
+		background-color: #aaa;
+		border-top: 1px solid black;
+	}
+	
+	.search-box-cell img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.search-box-cell input {
+		width: 100%;
+	}
+	
+	
+	
+	.div-cell {
+		width: 200px!important;
+	}
+
+}

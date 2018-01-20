@@ -1,0 +1,217 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+p {
+	margin: 15px 0px;
+}
+
+html {
+	/* Allows content to fill the viewport and go beyond the bottom */
+	height: 100%;
+
+	/* Allows you to scroll below the viewport; default value is visible */
+	overflow-y: scroll;
+	
+	/*Takes action on mobile */
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+body {
+	/* Allows content to fill the viewport and go beyond the bottom */
+	height: 100%;
+
+	/* Allows you to scroll below the viewport; default value is visible */
+	//overflow-y: scroll;
+
+	position: relative;
+	margin: 0;
+	background-color: rgb(240, 240, 240);
+	font-family: Ubuntu, sans-serif;
+	box-sizing: border-box;
+	
+	/*Takes action on mobile */
+	-webkit-overflow-scrolling: touch;
+}
+
+.timg {
+	width: 50px;
+	height: 50px;
+	background-color: #dc3545;
+	border: 1px solid;
+}
+
+.desktop-only {
+	display: none;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	height: 70px;
+}
+
+header h1 {
+	width: calc(100% - 70px);
+	padding-left: 10px;
+	font-size: 1.4em
+}
+
+main {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+	padding: 0 10px;
+	background-color: rgb(240, 240, 240);
+	box-sizing: border-box;
+	border-top: 1px solid;
+	box-sizing: border-box;
+}
+
+footer p {
+	width: 100%;
+}
+
+footer p:last-child {
+	text-align: right;
+}
+
+.cover-layer {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	/*Transition Styles*/
+	opacity: 0;	
+	z-index: -1;
+}
+
+.cover-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	/*Transition Styles*/
+	transform: scale(0.1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.fade-in .cover-container {
+	transform: scale(1);
+}
+
+.cover-container h3 {
+	margin: 10px;
+}
+
+.container-1 {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-2 {
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid;
+}
+
+.cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 10px;
+	font-size: 1.25em;
+	text-decoration: none;
+	color: white;
+	background-color: #007bff;
+	filter: contrast(100%);
+	border: 1px solid black;
+	border-radius: 4px;
+	box-sizing: content-box;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px black;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.cover-layer .cta {
+	width: 90%;
+}
+
+.cta.toggle {
+	transform: translateY(4px);
+	box-shadow: 0px 0px 0px black;
+}
+
+.logo-img {
+	width: 150px;
+	height: 50px;
+	margin: 0 10px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.taylor-hobson {
+	background-image: url(../Images/ThLogo.jpg);
+}
+
+.ametek {
+    background-image: url(../Images/AmetekLogo.jpg);
+}
+
+.fade-in {
+	opacity: 1;
+	z-index: 30;
+}
+
+@media screen and (min-width: 1100px) {
+
+	html {
+		overflow-y: visible;
+	}
+
+	.desktop-only {
+		display: block;
+		overflow: inherit;
+	}
+
+    header {
+        justify-content: space-between;
+        background-image: url(../Images/ThBlue.jpg);
+    }
+
+	header h1 {
+		color: white;
+		text-align: center;
+	}
+
+	.container-1 {
+		flex-direction: row;
+	}
+
+	.container-2 {
+		width: 50%;
+	}
+
+}
