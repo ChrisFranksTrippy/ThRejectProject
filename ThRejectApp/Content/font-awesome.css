@@ -24,3 +24,7 @@
 .fa-close:before {
     content: "\f00d";
 }
+
+.fa-refresh:before {
+    content: "\f021";
+}

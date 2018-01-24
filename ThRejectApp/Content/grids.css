@@ -4,7 +4,7 @@ main {
 }
 
 .container-2 {
-	//position: relative;
+	position: relative;
 	height: 100%;
 	margin: 5px;
 	overflow-y: auto;
@@ -54,7 +54,7 @@ main {
 	border-bottom: 1px solid black;
 }
 
-#example-record {
+#t-body #example-record {
 	padding: 10px;
 	color: black;
 	background-color: lightgray;
@@ -82,22 +82,22 @@ main {
 }
 
 .mobile-search {
-	display: flex !important;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 100%;
-	height: calc(100% - 50px);
+	width: 0px;
+	height: 0px;
 	background-color: rgba(0,0,0,0.5);
 	opacity: 0;
-	z-index: -1;
 }
 
 .mobile-search.show {
+	width: 100%;
+	height: calc(100% - 50px);
 	opacity: 1;
-	z-index: 30;
 }
 
 .mobile-search .div-row {
@@ -177,9 +177,18 @@ main {
 		left: 0px;
 		height: 50px;
 		background-color: #aaa;
+		opacity: 1;
 	}
 
 	#example-record {
+		display: none;
+	}
+	
+	.mobile-search {
+		display: none;
+	}
+	
+	#mobile-search-button {
 		display: none;
 	}
 

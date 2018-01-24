@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
 }
 
 <link rel="stylesheet" href="~/Content/input-form.css">
@@ -15,7 +16,16 @@
 </div>
 
 @Html.Partial("~/Views/Shared/Header.cshtml")
-@Html.Partial("~/Views/Shared/Nav.cshtml")
+
+<nav id="menu-draw">
+    <a class="nav-item active-nav-item" href="@Url.Action("Index", "Home")">Raise Ticket</a>
+    <a class="nav-item" href="@Url.Action("Tickets", "TicketGrid")">All Tickets</a>
+</nav>
+<div id="menu-burger" class="burger">
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+</div>
 
 <main>
     <div class="container-1">
@@ -88,6 +98,17 @@
                 </div>
             </div>
 
+
+
+
+
+            <!--
+                            <div class="line">
+                                <input type="text" placeholder="">
+                            </div>
+            -->
+            <!--Date, Month, Number all produced mobile friendly keyboards -->
+
         </section>
 
     </div>
@@ -129,10 +150,12 @@
     <div id="submit-button" class="cta">Send Form</div>
 
     <div class="cta" onclick="window.location.reload(true);">Force Reload</div>
+
 </main>
 <footer>
     <p>&copy; Chris Franks</p>
     <p>P14140100</p>
 </footer>
+
 
 <script src="~/Scripts/input-form.js"></script>

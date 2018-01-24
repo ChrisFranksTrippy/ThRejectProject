@@ -7,8 +7,16 @@
 
 
 @Html.Partial("~/Views/Shared/Header.cshtml")
-@Html.Partial("~/Views/Shared/Nav.cshtml")
 
+<nav id="menu-draw">
+    <a class="nav-item" href="@Url.Action("Index", "Home")">Raise Ticket</a>
+    <a class="nav-item active-nav-item" href="@Url.Action("Tickets", "TicketGrid")">All Tickets</a>
+</nav>
+<div id="menu-burger" class="burger">
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+</div>
 
 <main>
 
@@ -42,195 +50,68 @@
                 <div class="div-cell">Buyer</div>
             </div>
 
+            @for (int i = 0; i < 10; i++)
+            {
+                <div class="div-row cta">
+                    <div class="div-cell">10 Dec 2017</div>
+                    <div class="div-cell">Company</div>
+                    <div class="div-cell">2000@(i + 1)</div>
+                    <div class="div-cell">Joe Bloggs</div>
+                </div>
+            }
 
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20001</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20002</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20003</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20004</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20005</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20006</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-
-
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
-            <div class="div-row cta">
-                <div class="div-cell">10 Dec 2017</div>
-                <div class="div-cell">Company</div>
-                <div class="div-cell">20007</div>
-                <div class="div-cell">Joe Bloggs</div>
-            </div>
 
         </div>
 
-        <div id="t-footer" class="mobile-search">
+        <div id="t-footer">
             <div class="div-row">
-                <h1>Search</h1>
                 <div class="search-box-cell div-cell">
                     <img src="img/SearchIcon.svg" />
-                    <p>Date Raised:</p>
                     <input placeholder="Search..." />
                 </div>
                 <div class="search-box-cell div-cell">
                     <img src="img/SearchIcon.svg" />
-                    <p>Vendor:</p>
                     <input placeholder="Search..." />
                 </div>
                 <div class="search-box-cell div-cell">
                     <img src="img/SearchIcon.svg" />
-                    <p>Reject Number:</p>
                     <input placeholder="Search..." />
                 </div>
                 <div class="search-box-cell div-cell">
                     <img src="img/SearchIcon.svg" />
-                    <p>Buyer Name:</p>
                     <input placeholder="Search..." />
                 </div>
 
             </div>
         </div>
 
+    </div>
+
+    <div id="mobile-search" class="mobile-search">
+        <div class="div-row">
+            <h1>Search</h1>
+            <div class="search-box-cell div-cell">
+                <img src="~/Images/SearchIcon.svg" />
+                <p>Date Raised:</p>
+                <input placeholder="Search..." />
+            </div>
+            <div class="search-box-cell div-cell">
+                <img src="~/Images/SearchIcon.svg" />
+                <p>Vendor:</p>
+                <input placeholder="Search..." />
+            </div>
+            <div class="search-box-cell div-cell">
+                <img src="~/Images/SearchIcon.svg" />
+                <p>Reject Number:</p>
+                <input placeholder="Search..." />
+            </div>
+            <div class="search-box-cell div-cell">
+                <img src="~/Images/SearchIcon.svg" />
+                <p>Buyer Name:</p>
+                <input placeholder="Search..." />
+            </div>
+
+        </div>
     </div>
 
 </main>
@@ -239,10 +120,17 @@
     <div class="search-icon">
         <span id="mobile-search-button" class="fa fa-search cta"></span>
     </div>
+    <div class="search-icon">
+        <span class="fa fa-refresh cta" onclick="window.location.reload(true);"></span>
+    </div>
     <div class="footer-tools">
 
     </div>
     <p>P14140100</p>
 </footer>
+
+<div class="hide">
+    <p id="edit-link">@Url.Action("EditForm", "BuyerForm")</p>
+</div>
 
 <script src="~/Scripts/ticket-js.js"></script>

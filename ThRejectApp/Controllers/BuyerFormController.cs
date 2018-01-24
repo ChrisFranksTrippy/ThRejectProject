@@ -9,8 +9,9 @@ namespace ThRejectApp.Controllers
     public class BuyerFormController : Controller
     {
         // GET: BuyerForm
-        public ActionResult Index()
+        public ActionResult EditForm(string RejectNo)
         {
+            ViewBag.RejectNo = RejectNo;
             return View();
         }
     }

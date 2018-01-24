@@ -14,7 +14,19 @@
 		checkboxContainers[i].addEventListener("click", checkboxHandler);
 	}
 
-	function ctaHandler(event) {
+    function ctaHandler(event) {
+        let clickTarget = event.target;
+
+        while (true) {
+            if (clickTarget.tagName.toLowerCase() === "body") {
+                return 0;
+            } else if (!clickTarget.classList.contains("cta")) {
+                clickTarget = clickTarget.parentElement;
+            } else {
+                break;
+            }
+        }
+                
 		event.target.classList.add("toggle");
 		event.target.addEventListener("transitionend", ctaTransitionend);
 	}

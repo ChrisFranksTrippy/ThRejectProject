@@ -1,0 +1,172 @@
+﻿
+<link rel="stylesheet" href="~/Content/input-form.css">
+
+<header>
+    <div class="taylor-hobson logo-img desktop-only"></div>
+    <h1>Reject Number: @ViewBag.RejectNo</h1>
+    <div class="ametek logo-img desktop-only"></div>
+</header>
+
+<nav id="menu-draw">
+    <a class="nav-item" href="@Url.Action("Index", "Home")">Raise Ticket</a>
+    <a class="nav-item active-nav-item" href="@Url.Action("Tickets", "TicketGrid")">All Tickets</a>
+</nav>
+<div id="menu-burger" class="burger">
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+    <span class="menu-span"></span>
+</div>
+
+<main>
+    <div class="container-1">
+        <section class="container-2">
+            <h2>Vendor Information</h2>
+            <div class="line">
+                <h3>Vendor Name:</h3>
+                <input type="text">
+            </div>
+            <div class="line line--sub-container">
+                <h3>Address:</h3>
+                <div class="line--sub">
+                    <input type="text" placeholder="Line one">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Line two">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="City">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Post code">
+                </div>
+                <div class="line--sub">
+                    <input type="text" placeholder="Country code">
+                </div>
+            </div>
+            <div class="line">
+                <h3>Buyer Name:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Buyer Email:</h3>
+                <input type="text">
+            </div>
+        </section>
+        <section class="container-2">
+            <h2>Reject Information</h2>
+            <div class="line">
+                <h3>Reject Note</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Date Raise:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>PRO No:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Replacement PO No:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Supplier RMA No:</h3>
+                <input type="text">
+            </div>
+            <div class="line line--checkbox">
+                <input type="text">
+                <h3>Shipping Method:</h3>
+                <div class="checkbox-container checkbox-container--multi-option">
+                    <span>DHL</span>
+                    <span>Collect</span>
+                    <span>Scrap</span>
+                </div>
+            </div>
+            <div class="line">
+                <h3>Tracking No:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Manufacturing No:</h3>
+                <input type="text">
+            </div>
+        </section>
+    </div>
+    <div class="container-1">
+        <section class="container-2">
+            <h2>Part Information</h2>
+            <div class="line">
+                <h3>Part No:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Description:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Rejectioned Quanty:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Total Value (£):</h3>
+                <input type="text">
+            </div>
+        </section>
+
+        <section class="container-2">
+            <h2>Reason for Rejection</h2>
+            <div class="line">
+                <h3>Reason Code:</h3>
+                <select>
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="line">
+                <h3>Description:</h3>
+                <input type="text">
+            </div>
+            <div class="line">
+                <h3>Rejected PO No:</h3>
+                <input id="textbox-width" type="text">
+            </div>
+        </section>
+
+    </div>
+
+    <div class="container-2 notice">
+        <h2>Important Notice</h2>
+        <p>Please issue a credit for these rejected goods with the reference <span>PRO No</span></p>
+        <p>Replacements are <span>Not Required</span></p>
+    </div>
+
+    <div class="container-2 container-2--full-width">
+        <div class="line">
+            <h3>Date Goods Shipped</h3>
+            <input class="date-width-fix" type="date">
+        </div>
+        <div class="line line--checkbox line--checkbox-slider">
+            <h3>Credit Note Recieved</h3>
+            <input type="checkbox">
+            <div id="credit-recieved-slider" class="checkbox-container--slider">
+                <div class="green-slider"></div>
+                <div class="ball-slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="save-button" class="cta">Save &amp; Close</div>
+    <div id="cancel-button" class="cta">Cancel</div>
+    <div class="cta" onclick="window.location.reload(true);">Force Reload</div>
+
+</main>
+<footer>
+    <p>&copy; Chris Franks</p>
+    <p>P14140100</p>
+</footer>
+
+<script src="~/Scripts/edit-form.js"></script>

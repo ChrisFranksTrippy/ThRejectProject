@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RejectDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbItems">
+          <Key>
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="UnitCost" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbRejectRecords">
+          <Key>
+            <PropertyRef Name="RejectNo" />
+          </Key>
+          <Property Name="RejectNo" Type="int" Nullable="false" />
+          <Property Name="PartNo" Type="varchar" MaxLength="50" />
+          <Property Name="QtyRejected" Type="int" />
+          <Property Name="PartDescription" Type="varchar" MaxLength="50" />
+          <Property Name="TotalValue" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Vendor" Type="varchar" MaxLength="50" />
+          <Property Name="BuyerName" Type="varchar" MaxLength="50" />
+          <Property Name="BuyerEmail" Type="varchar" MaxLength="100" />
+          <Property Name="VendorNo" Type="varchar" MaxLength="50" />
+          <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
+          <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="50" />
+          <Property Name="PostCode" Type="varchar" MaxLength="50" />
+          <Property Name="ReplacementRequired" Type="varchar" MaxLength="50" />
+          <Property Name="ReasonCode" Type="int" />
+          <Property Name="ReturnDescription" Type="varchar" MaxLength="50" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="50" />
+          <Property Name="DateRaised" Type="date" />
+          <Property Name="ProNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReplacementPo" Type="varchar" MaxLength="50" />
+          <Property Name="CreditNoteReceived" Type="varchar" MaxLength="50" />
+          <Property Name="GoodsShipped" Type="varchar" MaxLength="50" />
+          <Property Name="DateGoodsShipped" Type="date" />
+          <Property Name="RmaNo" Type="varchar" MaxLength="50" />
+          <Property Name="ShippingMethod" Type="varchar" MaxLength="50" />
+          <Property Name="RejectedPoNo" Type="varchar" MaxLength="50" />
+          <Property Name="TrackingNo" Type="varchar" MaxLength="50" />
+          <Property Name="MoNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbReturn_Reasons">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbSalePurchase_Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+          <Property Name="Email" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbVendors">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Address_2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="PostCode" Type="varchar" MaxLength="50" />
+          <Property Name="Country_Region_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Purchase_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Search_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="RejectDbModelStoreContainer">
+          <EntitySet Name="tbItems" EntityType="Self.tbItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbRejectRecords" EntityType="Self.tbRejectRecords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbReturn_Reasons" EntityType="Self.tbReturn_Reasons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbSalePurchase_Person" EntityType="Self.tbSalePurchase_Person" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbVendors" EntityType="Self.tbVendors" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RejectDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbItem">
+          <Key>
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Name="PartNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UnitCost" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbReturn_Reasons">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbSalePurchase_Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbVendor">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country_Region_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Purchase_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Search_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="RejectDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbItems" EntityType="Self.tbItem" />
+          <EntitySet Name="tbReturn_Reasons" EntityType="Self.tbReturn_Reasons" />
+          <EntitySet Name="tbSalePurchase_Person" EntityType="Self.tbSalePurchase_Person" />
+          <EntitySet Name="tbVendors" EntityType="Self.tbVendor" />
+          <EntitySet Name="tbRejectRecords" EntityType="RejectDbModel.tbRejectRecord" />
+        </EntityContainer>
+        <EntityType Name="tbRejectRecord">
+          <Key>
+            <PropertyRef Name="RejectNo" />
+          </Key>
+          <Property Name="RejectNo" Type="Int32" Nullable="false" />
+          <Property Name="PartNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QtyRejected" Type="Int32" />
+          <Property Name="PartDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalValue" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Vendor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BuyerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BuyerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VendorNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReplacementRequired" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReasonCode" Type="Int32" />
+          <Property Name="ReturnDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateRaised" Type="DateTime" Precision="0" />
+          <Property Name="ProNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReplacementPo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreditNoteReceived" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GoodsShipped" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateGoodsShipped" Type="DateTime" Precision="0" />
+          <Property Name="RmaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ShippingMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RejectedPoNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrackingNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MoNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RejectDbModelStoreContainer" CdmEntityContainer="RejectDbEntities">
+          <EntitySetMapping Name="tbItems">
+            <EntityTypeMapping TypeName="RejectDbModel.tbItem">
+              <MappingFragment StoreEntitySet="tbItems">
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbReturn_Reasons">
+            <EntityTypeMapping TypeName="RejectDbModel.tbReturn_Reasons">
+              <MappingFragment StoreEntitySet="tbReturn_Reasons">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbSalePurchase_Person">
+            <EntityTypeMapping TypeName="RejectDbModel.tbSalePurchase_Person">
+              <MappingFragment StoreEntitySet="tbSalePurchase_Person">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbVendors">
+            <EntityTypeMapping TypeName="RejectDbModel.tbVendor">
+              <MappingFragment StoreEntitySet="tbVendors">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address_2" ColumnName="Address_2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region_Code" />
+                <ScalarProperty Name="Purchase_Code" ColumnName="Purchase_Code" />
+                <ScalarProperty Name="Search_Name" ColumnName="Search_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbRejectRecords">
+            <EntityTypeMapping TypeName="RejectDbModel.tbRejectRecord">
+              <MappingFragment StoreEntitySet="tbRejectRecords">
+                <ScalarProperty Name="MoNo" ColumnName="MoNo" />
+                <ScalarProperty Name="TrackingNo" ColumnName="TrackingNo" />
+                <ScalarProperty Name="RejectedPoNo" ColumnName="RejectedPoNo" />
+                <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+                <ScalarProperty Name="RmaNo" ColumnName="RmaNo" />
+                <ScalarProperty Name="DateGoodsShipped" ColumnName="DateGoodsShipped" />
+                <ScalarProperty Name="GoodsShipped" ColumnName="GoodsShipped" />
+                <ScalarProperty Name="CreditNoteReceived" ColumnName="CreditNoteReceived" />
+                <ScalarProperty Name="ReplacementPo" ColumnName="ReplacementPo" />
+                <ScalarProperty Name="ProNo" ColumnName="ProNo" />
+                <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="ReturnDescription" ColumnName="ReturnDescription" />
+                <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+                <ScalarProperty Name="ReplacementRequired" ColumnName="ReplacementRequired" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="VendorNo" ColumnName="VendorNo" />
+                <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+                <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+                <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
+                <ScalarProperty Name="QtyRejected" ColumnName="QtyRejected" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="RejectNo" ColumnName="RejectNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
