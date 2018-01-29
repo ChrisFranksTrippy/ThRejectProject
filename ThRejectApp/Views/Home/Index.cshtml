@@ -33,22 +33,22 @@
             <h2>Part Information</h2>
             <div class="line">
                 <h3>Part Number:</h3>
-                <input type="text">
+                <input id="PartNo" type="text">
             </div>
             <div class="line">
                 <h3>Quanty Rejected:</h3>
-                <input type="text">
+                <input id="QtyRejected" type="text">
             </div>
             <div class="line">
                 <h3>Part Description:</h3>
-                <input type="text">
+                <input id="PartDescription" type="text">
             </div>
             <div class="line">
                 <h3>Value (£):</h3>
-                <input type="text">
+                <input id="TotalValue" type="text">
             </div>
             <div class="line line--checkbox">
-                <input type="text">
+                <input id="ReplacementRequired" type="text">
                 <h3>Replacement Needed:</h3>
                 <div class="checkbox-container checkbox-container--yn">
                     <span>Yes</span>
@@ -57,50 +57,46 @@
             </div>
             <div class="line">
                 <h3>Manufacturing Order:</h3>
-                <input type="text">
+                <input id="MoNo" type="text">
             </div>
         </section>
         <section class="container-2">
             <h2>Vendor Information</h2>
             <div class="line">
                 <h3>Vendor Name:</h3>
-                <input type="text">
+                <input id="Vendor" type="text">
             </div>
             <div class="line">
                 <h3>Buyer Name:</h3>
-                <input type="text">
+                <input id="BuyerName" type="text">
             </div>
             <div class="line">
                 <h3>Buyer Email:</h3>
-                <input type="text">
+                <input id="BuyerEmail" type="text">
             </div>
             <div class="line">
                 <h3>Vendor Number:</h3>
-                <input type="text">
+                <input id="VendorNo" type="text">
             </div>
 
             <div class="line line--sub-container">
                 <h3>Address:</h3>
                 <div class="line--sub">
-                    <input type="text" placeholder="Line one">
+                    <input id="AddressLine1" type="text" placeholder="Line one">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Line two">
+                    <input id="AddressLine2" type="text" placeholder="Line two">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="City">
+                    <input id="City" type="text" placeholder="City">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Post code">
+                    <input id="PostCode" type="text" placeholder="Post code">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Country code">
+                    <input id="CountryCode" type="text" placeholder="Country code">
                 </div>
             </div>
-
-
-
-
 
             <!--
                             <div class="line">
@@ -118,7 +114,7 @@
             <h2>Rejection Information</h2>
             <div class="line">
                 <h3>Reason Code:</h3>
-                <select>
+                <select id="ReasonCode">
                     <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -128,25 +124,22 @@
             </div>
             <div class="line">
                 <h3>Description</h3>
-                <input type="text">
+                <input id="ReturnDescription" type="text">
             </div>
         </section>
         <section class="container-2">
             <h2>Employee Information</h2>
             <div class="line">
-                <h3>First Name:</h3>
-                <input type="text" placeholder="First name">
-            </div>
-            <div class="line">
-                <h3>Last Name:</h3>
-                <input id="textbox-width" type="text" placeholder="Last name">
+                <h3>Name:</h3>
+                <input id="EmployeeName" class="textbox-width" type="text" placeholder="First name">
             </div>
             <div class="line">
                 <h3>Date of Submittion:</h3>
-                <input class="date-width-fix" type="date">
+                <input id="DateRaised" class="date-width-fix" type="date">
             </div>
         </section>
     </div>
+
     <div id="submit-button" class="cta">Send Form</div>
 
     <div class="cta" onclick="window.location.reload(true);">Force Reload</div>
@@ -157,5 +150,9 @@
     <p>P14140100</p>
 </footer>
 
+<div class="hide">
+    <p id="submit-link">@Url.Action("SubmitForm")</p>
+</div>
 
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/input-form.js"></script>

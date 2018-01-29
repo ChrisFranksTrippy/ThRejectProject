@@ -88,3 +88,7 @@ C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp
 C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\obj\Debug\ThRejectApp.csproj.CoreCompileInputs.cache
 C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\obj\Debug\ThRejectApp.dll
 C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\obj\Debug\ThRejectApp.pdb
+C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\bin\EntityFramework.dll
+C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\bin\EntityFramework.xml
+C:\Users\Chris Laptop\Documents\Final Year Project 2\ThRejectProject\ThRejectApp\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RejectDbModelStoreContainer" CdmEntityContainer="RejectDbEntities">
+    <EntitySetMapping Name="tbItems">
+      <EntityTypeMapping TypeName="RejectDbModel.tbItem">
+        <MappingFragment StoreEntitySet="tbItems">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbReturn_Reasons">
+      <EntityTypeMapping TypeName="RejectDbModel.tbReturn_Reasons">
+        <MappingFragment StoreEntitySet="tbReturn_Reasons">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSalePurchase_Person">
+      <EntityTypeMapping TypeName="RejectDbModel.tbSalePurchase_Person">
+        <MappingFragment StoreEntitySet="tbSalePurchase_Person">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbVendors">
+      <EntityTypeMapping TypeName="RejectDbModel.tbVendor">
+        <MappingFragment StoreEntitySet="tbVendors">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Address_2" ColumnName="Address_2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region_Code" />
+          <ScalarProperty Name="Purchase_Code" ColumnName="Purchase_Code" />
+          <ScalarProperty Name="Search_Name" ColumnName="Search_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRejectRecords">
+      <EntityTypeMapping TypeName="RejectDbModel.tbRejectRecord">
+        <MappingFragment StoreEntitySet="tbRejectRecords">
+          <ScalarProperty Name="MoNo" ColumnName="MoNo" />
+          <ScalarProperty Name="TrackingNo" ColumnName="TrackingNo" />
+          <ScalarProperty Name="RejectedPoNo" ColumnName="RejectedPoNo" />
+          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+          <ScalarProperty Name="RmaNo" ColumnName="RmaNo" />
+          <ScalarProperty Name="DateGoodsShipped" ColumnName="DateGoodsShipped" />
+          <ScalarProperty Name="GoodsShipped" ColumnName="GoodsShipped" />
+          <ScalarProperty Name="CreditNoteReceived" ColumnName="CreditNoteReceived" />
+          <ScalarProperty Name="ReplacementPo" ColumnName="ReplacementPo" />
+          <ScalarProperty Name="ProNo" ColumnName="ProNo" />
+          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="ReturnDescription" ColumnName="ReturnDescription" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="ReplacementRequired" ColumnName="ReplacementRequired" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="VendorNo" ColumnName="VendorNo" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
+          <ScalarProperty Name="QtyRejected" ColumnName="QtyRejected" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="RejectNo" ColumnName="RejectNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

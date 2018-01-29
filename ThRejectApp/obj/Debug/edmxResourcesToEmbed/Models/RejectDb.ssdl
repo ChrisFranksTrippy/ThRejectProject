@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RejectDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbItems">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="UnitCost" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbRejectRecords">
+    <Key>
+      <PropertyRef Name="RejectNo" />
+    </Key>
+    <Property Name="RejectNo" Type="int" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" />
+    <Property Name="QtyRejected" Type="int" />
+    <Property Name="PartDescription" Type="varchar" MaxLength="50" />
+    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Vendor" Type="varchar" MaxLength="50" />
+    <Property Name="BuyerName" Type="varchar" MaxLength="50" />
+    <Property Name="BuyerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="VendorNo" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="50" />
+    <Property Name="PostCode" Type="varchar" MaxLength="50" />
+    <Property Name="ReplacementRequired" Type="varchar" MaxLength="50" />
+    <Property Name="ReasonCode" Type="int" />
+    <Property Name="ReturnDescription" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="50" />
+    <Property Name="DateRaised" Type="date" />
+    <Property Name="ProNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReplacementPo" Type="varchar" MaxLength="50" />
+    <Property Name="CreditNoteReceived" Type="varchar" MaxLength="50" />
+    <Property Name="GoodsShipped" Type="varchar" MaxLength="50" />
+    <Property Name="DateGoodsShipped" Type="date" />
+    <Property Name="RmaNo" Type="varchar" MaxLength="50" />
+    <Property Name="ShippingMethod" Type="varchar" MaxLength="50" />
+    <Property Name="RejectedPoNo" Type="varchar" MaxLength="50" />
+    <Property Name="TrackingNo" Type="varchar" MaxLength="50" />
+    <Property Name="MoNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbReturn_Reasons">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbSalePurchase_Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tbVendors">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Address_2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="PostCode" Type="varchar" MaxLength="50" />
+    <Property Name="Country_Region_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Purchase_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Search_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="RejectDbModelStoreContainer">
+    <EntitySet Name="tbItems" EntityType="Self.tbItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbRejectRecords" EntityType="Self.tbRejectRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbReturn_Reasons" EntityType="Self.tbReturn_Reasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSalePurchase_Person" EntityType="Self.tbSalePurchase_Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbVendors" EntityType="Self.tbVendors" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

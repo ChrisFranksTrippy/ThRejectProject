@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RejectDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbItem">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnitCost" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbReturn_Reasons">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbSalePurchase_Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbVendor">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country_Region_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Purchase_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Search_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="RejectDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbItems" EntityType="Self.tbItem" />
+    <EntitySet Name="tbReturn_Reasons" EntityType="Self.tbReturn_Reasons" />
+    <EntitySet Name="tbSalePurchase_Person" EntityType="Self.tbSalePurchase_Person" />
+    <EntitySet Name="tbVendors" EntityType="Self.tbVendor" />
+    <EntitySet Name="tbRejectRecords" EntityType="RejectDbModel.tbRejectRecord" />
+  </EntityContainer>
+  <EntityType Name="tbRejectRecord">
+    <Key>
+      <PropertyRef Name="RejectNo" />
+    </Key>
+    <Property Name="RejectNo" Type="Int32" Nullable="false" />
+    <Property Name="PartNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QtyRejected" Type="Int32" />
+    <Property Name="PartDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TotalValue" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Vendor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BuyerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BuyerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VendorNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReplacementRequired" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonCode" Type="Int32" />
+    <Property Name="ReturnDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateRaised" Type="DateTime" Precision="0" />
+    <Property Name="ProNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReplacementPo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreditNoteReceived" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoodsShipped" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateGoodsShipped" Type="DateTime" Precision="0" />
+    <Property Name="RmaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RejectedPoNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrackingNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MoNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

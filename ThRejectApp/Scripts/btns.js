@@ -43,7 +43,9 @@
 			let btnCount = checkContainer.children.length;
 
 			//Set input value
-			event.target.parentElement.parentElement.getElementsByTagName("input")[0].value = innerValue;
+			event.target.parentElement.parentElement.getElementsByTagName("input")[0].value = innerValue.toUpperCase();
+
+            //console.log(event.target.parentElement.parentElement.getElementsByTagName("input")[0].value);
 
 			for (let i = 0; i < btnCount; i++) {
 				checkContainer.children[i].classList.remove("toggle");

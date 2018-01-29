@@ -5,7 +5,7 @@
 	let uagent = navigator.userAgent.toLowerCase();
 	let docBody = document.getElementsByTagName("body")[0];
 
-	let setWidth = document.getElementById("textbox-width");
+	let setWidth = document.getElementsByClassName("textbox-width")[0];
 	let dateInputs = document.getElementsByClassName("date-width-fix");
 
 	if (uagent.search("iphone") > -1 || uagent.search("ipad") > -1) {
