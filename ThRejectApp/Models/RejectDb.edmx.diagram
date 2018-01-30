@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="de205061dc1a423faee8a1cb9353c65f" Name="Diagram1">
+      <Diagram DiagramId="c6bd539814fd46029a75756c668a73c7" Name="Diagram1">
         <EntityTypeShape EntityType="RejectDbModel.tbItem" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RejectDbModel.tbReturn_Reasons" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RejectDbModel.tbSalePurchase_Person" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RejectDbModel.tbVendor" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RejectDbModel.tbRejectRecord" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="RejectDbModel.tbRejectRecord" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RejectDbModel.tbReturn_Reasons" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RejectDbModel.tbSalePurchase_Person" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RejectDbModel.tbVendor" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,35 +12,35 @@
     <Key>
       <PropertyRef Name="RejectNo" />
     </Key>
-    <Property Name="RejectNo" Type="int" Nullable="false" />
-    <Property Name="PartNo" Type="varchar" MaxLength="50" />
-    <Property Name="QtyRejected" Type="int" />
-    <Property Name="PartDescription" Type="varchar" MaxLength="50" />
-    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="Vendor" Type="varchar" MaxLength="50" />
-    <Property Name="BuyerName" Type="varchar" MaxLength="50" />
-    <Property Name="BuyerEmail" Type="varchar" MaxLength="100" />
-    <Property Name="VendorNo" Type="varchar" MaxLength="50" />
-    <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
-    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
-    <Property Name="City" Type="varchar" MaxLength="50" />
-    <Property Name="CountryCode" Type="varchar" MaxLength="50" />
-    <Property Name="PostCode" Type="varchar" MaxLength="50" />
-    <Property Name="ReplacementRequired" Type="varchar" MaxLength="50" />
-    <Property Name="ReasonCode" Type="int" />
-    <Property Name="ReturnDescription" Type="varchar" MaxLength="50" />
-    <Property Name="EmployeeName" Type="varchar" MaxLength="50" />
-    <Property Name="DateRaised" Type="date" />
-    <Property Name="ProNo" Type="varchar" MaxLength="50" />
-    <Property Name="ReplacementPo" Type="varchar" MaxLength="50" />
-    <Property Name="CreditNoteReceived" Type="varchar" MaxLength="50" />
-    <Property Name="GoodsShipped" Type="varchar" MaxLength="50" />
-    <Property Name="DateGoodsShipped" Type="date" />
-    <Property Name="RmaNo" Type="varchar" MaxLength="50" />
-    <Property Name="ShippingMethod" Type="varchar" MaxLength="50" />
-    <Property Name="RejectedPoNo" Type="varchar" MaxLength="50" />
-    <Property Name="TrackingNo" Type="varchar" MaxLength="50" />
-    <Property Name="MoNo" Type="varchar" MaxLength="50" />
+    <Property Name="DateRaised" Type="date" Nullable="false" />
+    <Property Name="Vendor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RejectNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuyerName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QtyRejected" Type="int" Nullable="false" />
+    <Property Name="PartDescription" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BuyerEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="VendorNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PostCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReplacementRequired" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReasonCode" Type="int" Nullable="false" />
+    <Property Name="ReturnDescription" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReplacementPo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreditNoteReceived" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GoodsShipped" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateGoodsShipped" Type="date" Nullable="false" />
+    <Property Name="RmaNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShippingMethod" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RejectedPoNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TrackingNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoNo" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="tbReturn_Reasons">
     <Key>
@@ -54,8 +54,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nchar" MaxLength="10" />
-    <Property Name="Email" Type="nchar" MaxLength="10" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Purchase_Code" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tbVendors">
     <Key>

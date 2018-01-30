@@ -1,11 +1,13 @@
-﻿@model System.Data.DataTable
+﻿@model System.Data.DataSet
 
 @{
     ViewBag.Title = "Home Page";
+    System.Data.DataSet MyDataTable = Model;
+    System.Data.DataRowCollection TableRows = Model.Tables[0].Rows;
+    int RowItemCount = TableRows[0].ItemArray.Length;
 }
 
 <link rel="stylesheet" href="~/Content/grids.css">
-
 
 @Html.Partial("~/Views/Shared/Header.cshtml")
 
@@ -25,21 +27,44 @@
 
         <div id="t-header">
             <div class="div-row">
+                @for (int j = 0; j < RowItemCount; j++)
+                {
+                    switch (Model.Tables[0].Columns[j].ColumnName)
+                    {
+                        case "DateRaised":
+                        case "Vendor":
+                        case "RejectNo":
+                        case "BuyerName":
+                            <div class="div-cell"><h3>@Model.Tables[0].Columns[j].ColumnName</h3></div>
+                            break;
 
-                <div class="div-cell">
-                    <h3>Date Raised</h3>
-                </div>
-                <div class="div-cell">
-                    <h3>Vendor</h3>
-                </div>
-                <div class="div-cell">
-                    <h3>Reject No</h3>
-                </div>
-                <div class="div-cell">
-                    <h3>Buyer</h3>
-                </div>
+                        default:
+                            <div class="div-cell desktop-only"><h3>@Model.Tables[0].Columns[j].ColumnName</h3></div>
+                            break;
 
+                    }
+
+                }
             </div>
+
+
+            @*<div class="div-row">
+
+                    <div class="div-cell">
+                        <h3>Date Raised</h3>
+                    </div>
+                    <div class="div-cell">
+                        <h3>Vendor</h3>
+                    </div>
+                    <div class="div-cell">
+                        <h3>Reject No</h3>
+                    </div>
+                    <div class="div-cell">
+                        <h3>Buyer</h3>
+                    </div>
+
+                </div>*@
+
         </div>
 
         <div id="t-body">
@@ -51,42 +76,56 @@
                 <div class="div-cell">Buyer</div>
             </div>
 
-            @for (int i = 0; i < 10; i++)
+            @*@for (int i = 0; i < 10; i++)
+                {
+                    <div class="div-row cta">
+                        <div class="div-cell">10 Dec 2017</div>
+                        <div class="div-cell">Company</div>
+                        <div class="div-cell">2000@(i + 1)</div>
+                        <div class="div-cell">Joe Bloggs</div>
+                    </div>
+                }*@
+
+            @for (int i = 0; i < TableRows.Count; i++)
             {
                 <div class="div-row cta">
-                    <div class="div-cell">10 Dec 2017</div>
-                    <div class="div-cell">Company</div>
-                    <div class="div-cell">2000@(i + 1)</div>
-                    <div class="div-cell">Joe Bloggs</div>
+                    @for (int j = 0; j < RowItemCount; j++)
+                    {
+                        switch (Model.Tables[0].Columns[j].ColumnName)
+                        {
+                            case "DateRaised":
+                            case "Vendor":
+                            case "RejectNo":
+                            case "BuyerName":
+                                <div class="div-cell">@TableRows[i][j]</div>
+                                break;
+
+                            default:
+                                <div class="div-cell desktop-only">@TableRows[i][j]</div>
+                                break;
+
+                        }
+
+                    }
                 </div>
             }
 
-
         </div>
-
         <div id="t-footer">
             <div class="div-row">
-                <div class="search-box-cell div-cell">
-                    <img src="img/SearchIcon.svg" />
-                    <input placeholder="Search..." />
-                </div>
-                <div class="search-box-cell div-cell">
-                    <img src="img/SearchIcon.svg" />
-                    <input placeholder="Search..." />
-                </div>
-                <div class="search-box-cell div-cell">
-                    <img src="img/SearchIcon.svg" />
-                    <input placeholder="Search..." />
-                </div>
-                <div class="search-box-cell div-cell">
-                    <img src="img/SearchIcon.svg" />
-                    <input placeholder="Search..." />
-                </div>
-
+                @for (int j = 0; j < RowItemCount; j++)
+                {
+                    <div class="search-box-cell div-cell @Model.Tables[0].Columns[j].ColumnName">
+                        <span class="fa fa-search"></span>
+                        <input placeholder="Search..." />
+                    </div>
+                }
             </div>
         </div>
 
+
     </div>
+
 
     <div id="mobile-search" class="mobile-search">
         <div class="div-row">

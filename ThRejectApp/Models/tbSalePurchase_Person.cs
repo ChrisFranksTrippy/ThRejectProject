@@ -17,5 +17,6 @@ namespace ThRejectApp.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public string Purchase_Code { get; set; }
     }
 }

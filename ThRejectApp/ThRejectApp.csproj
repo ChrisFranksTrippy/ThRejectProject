@@ -156,39 +156,40 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\RejectDb.Context.cs">
+    <Compile Include="Models\RejectDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RejectDb.Context.tt</DependentUpon>
+      <DependentUpon>RejectDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RejectDb.cs">
+    <Compile Include="Models\RejectDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RejectDb.Designer.cs">
+    <Compile Include="Models\RejectDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RejectDb.edmx</DependentUpon>
+      <DependentUpon>RejectDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\tbItem.cs">
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbRejectRecord.cs">
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbReturn_Reasons.cs">
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbSalePurchase_Person.cs">
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbVendor.cs">
-      <DependentUpon>RejectDb.tt</DependentUpon>
+      <DependentUpon>RejectDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\action-classes.css" />
     <Content Include="Content\base.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\grids.css" />
@@ -204,15 +205,15 @@
     <Content Include="Images\SearchIcon.svg" />
     <Content Include="Images\ThBlue.jpg" />
     <Content Include="Images\ThLogo.jpg" />
-    <Content Include="Models\RejectDb.Context.tt">
+    <Content Include="Models\RejectDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RejectDb.Context.cs</LastGenOutput>
-      <DependentUpon>RejectDb.edmx</DependentUpon>
+      <DependentUpon>RejectDB.edmx</DependentUpon>
+      <LastGenOutput>RejectDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\RejectDb.tt">
+    <Content Include="Models\RejectDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RejectDb.edmx</DependentUpon>
-      <LastGenOutput>RejectDb.cs</LastGenOutput>
+      <DependentUpon>RejectDB.edmx</DependentUpon>
+      <LastGenOutput>RejectDB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\btns.js" />
     <Content Include="Scripts\edit-form.js" />
@@ -250,12 +251,12 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
-    <EntityDeploy Include="Models\RejectDb.edmx">
+    <EntityDeploy Include="Models\RejectDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RejectDb.Designer.cs</LastGenOutput>
+      <LastGenOutput>RejectDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\RejectDb.edmx.diagram">
-      <DependentUpon>RejectDb.edmx</DependentUpon>
+    <Content Include="Models\RejectDB.edmx.diagram">
+      <DependentUpon>RejectDB.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\Shared\Nav.cshtml" />

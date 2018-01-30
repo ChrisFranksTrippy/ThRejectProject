@@ -10,6 +10,41 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbRejectRecords">
+      <EntityTypeMapping TypeName="RejectDbModel.tbRejectRecord">
+        <MappingFragment StoreEntitySet="tbRejectRecords">
+          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="RejectNo" ColumnName="RejectNo" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="QtyRejected" ColumnName="QtyRejected" />
+          <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="VendorNo" ColumnName="VendorNo" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="ReplacementRequired" ColumnName="ReplacementRequired" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="ReturnDescription" ColumnName="ReturnDescription" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="ProNo" ColumnName="ProNo" />
+          <ScalarProperty Name="ReplacementPo" ColumnName="ReplacementPo" />
+          <ScalarProperty Name="CreditNoteReceived" ColumnName="CreditNoteReceived" />
+          <ScalarProperty Name="GoodsShipped" ColumnName="GoodsShipped" />
+          <ScalarProperty Name="DateGoodsShipped" ColumnName="DateGoodsShipped" />
+          <ScalarProperty Name="RmaNo" ColumnName="RmaNo" />
+          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+          <ScalarProperty Name="RejectedPoNo" ColumnName="RejectedPoNo" />
+          <ScalarProperty Name="TrackingNo" ColumnName="TrackingNo" />
+          <ScalarProperty Name="MoNo" ColumnName="MoNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tbReturn_Reasons">
       <EntityTypeMapping TypeName="RejectDbModel.tbReturn_Reasons">
         <MappingFragment StoreEntitySet="tbReturn_Reasons">
@@ -24,6 +59,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Purchase_Code" ColumnName="Purchase_Code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -38,41 +74,6 @@
           <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region_Code" />
           <ScalarProperty Name="Purchase_Code" ColumnName="Purchase_Code" />
           <ScalarProperty Name="Search_Name" ColumnName="Search_Name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tbRejectRecords">
-      <EntityTypeMapping TypeName="RejectDbModel.tbRejectRecord">
-        <MappingFragment StoreEntitySet="tbRejectRecords">
-          <ScalarProperty Name="MoNo" ColumnName="MoNo" />
-          <ScalarProperty Name="TrackingNo" ColumnName="TrackingNo" />
-          <ScalarProperty Name="RejectedPoNo" ColumnName="RejectedPoNo" />
-          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
-          <ScalarProperty Name="RmaNo" ColumnName="RmaNo" />
-          <ScalarProperty Name="DateGoodsShipped" ColumnName="DateGoodsShipped" />
-          <ScalarProperty Name="GoodsShipped" ColumnName="GoodsShipped" />
-          <ScalarProperty Name="CreditNoteReceived" ColumnName="CreditNoteReceived" />
-          <ScalarProperty Name="ReplacementPo" ColumnName="ReplacementPo" />
-          <ScalarProperty Name="ProNo" ColumnName="ProNo" />
-          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
-          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
-          <ScalarProperty Name="ReturnDescription" ColumnName="ReturnDescription" />
-          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
-          <ScalarProperty Name="ReplacementRequired" ColumnName="ReplacementRequired" />
-          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
-          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
-          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
-          <ScalarProperty Name="VendorNo" ColumnName="VendorNo" />
-          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
-          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
-          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
-          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
-          <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
-          <ScalarProperty Name="QtyRejected" ColumnName="QtyRejected" />
-          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
-          <ScalarProperty Name="RejectNo" ColumnName="RejectNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -26,9 +26,9 @@ namespace ThRejectApp.Models
         }
     
         public virtual DbSet<tbItem> tbItems { get; set; }
+        public virtual DbSet<tbRejectRecord> tbRejectRecords { get; set; }
         public virtual DbSet<tbReturn_Reasons> tbReturn_Reasons { get; set; }
         public virtual DbSet<tbSalePurchase_Person> tbSalePurchase_Person { get; set; }
         public virtual DbSet<tbVendor> tbVendors { get; set; }
-        public virtual DbSet<tbRejectRecord> tbRejectRecords { get; set; }
     }
 }

@@ -14,13 +14,14 @@ namespace ThRejectApp.Models
     
     public partial class tbRejectRecord
     {
-        public int RejectNo { get; set; }
-        public string PartNo { get; set; }
-        public Nullable<int> QtyRejected { get; set; }
-        public string PartDescription { get; set; }
-        public Nullable<decimal> TotalValue { get; set; }
+        public System.DateTime DateRaised { get; set; }
         public string Vendor { get; set; }
+        public int RejectNo { get; set; }
         public string BuyerName { get; set; }
+        public string PartNo { get; set; }
+        public int QtyRejected { get; set; }
+        public string PartDescription { get; set; }
+        public decimal TotalValue { get; set; }
         public string BuyerEmail { get; set; }
         public string VendorNo { get; set; }
         public string AddressLine1 { get; set; }
@@ -29,15 +30,14 @@ namespace ThRejectApp.Models
         public string CountryCode { get; set; }
         public string PostCode { get; set; }
         public string ReplacementRequired { get; set; }
-        public Nullable<int> ReasonCode { get; set; }
+        public int ReasonCode { get; set; }
         public string ReturnDescription { get; set; }
         public string EmployeeName { get; set; }
-        public Nullable<System.DateTime> DateRaised { get; set; }
         public string ProNo { get; set; }
         public string ReplacementPo { get; set; }
         public string CreditNoteReceived { get; set; }
         public string GoodsShipped { get; set; }
-        public Nullable<System.DateTime> DateGoodsShipped { get; set; }
+        public System.DateTime DateGoodsShipped { get; set; }
         public string RmaNo { get; set; }
         public string ShippingMethod { get; set; }
         public string RejectedPoNo { get; set; }

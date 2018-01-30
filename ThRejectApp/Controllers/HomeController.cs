@@ -36,8 +36,17 @@ namespace ThRejectApp.Controllers
 
             NewRejectrecord.DateRaised = DateTime.Now;
 
-            NewRejectrecord.ProNo = "";
-            NewRejectrecord.ReplacementPo = "";
+            NewRejectrecord.ProNo = "Test";
+            NewRejectrecord.ReplacementPo = "Test";
+            NewRejectrecord.RejectedPoNo = "Test";
+            NewRejectrecord.ShippingMethod = "Test";
+            NewRejectrecord.TrackingNo = "Test";
+            NewRejectrecord.RmaNo = "Test";
+
+
+            //NewRejectrecord.ProNo = "";
+            //NewRejectrecord.ReplacementPo = "";
+            //NewRejectrecord.RejectedPoNo = "";
             NewRejectrecord.CreditNoteReceived = "NO";
             NewRejectrecord.GoodsShipped = "NO";
 
@@ -45,28 +54,29 @@ namespace ThRejectApp.Controllers
             DatabaseConnection.SaveChanges();
 
             //Added POR, return Rejection Note
+            //Buyer Email must be in the correct format.
 
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.To.Add("1000frankschris@gmail.com");
-            mailMessage.CC.Add(NewRejectrecord.BuyerEmail);
-            mailMessage.From = new MailAddress("New_Reject_Note@ametek.com");
-            mailMessage.Subject = "New Reject Note: " + NewRejectrecord.RejectNo;
-            mailMessage.Body = NewRejectrecord.BuyerName + ",\n\nNew Reject Note " + NewRejectrecord.RejectNo + " raised: "
+            //MailMessage mailMessage = new MailMessage();
+            //mailMessage.To.Add("1000frankschris@gmail.com");
+            //mailMessage.CC.Add(NewRejectrecord.BuyerEmail);
+            //mailMessage.From = new MailAddress("New_Reject_Note@ametek.com");
+            //mailMessage.Subject = "New Reject Note: " + NewRejectrecord.RejectNo;
+            //mailMessage.Body = NewRejectrecord.BuyerName + ",\n\nNew Reject Note " + NewRejectrecord.RejectNo + " raised: "
 
-                + "\n\nVendor: " + NewRejectrecord.Vendor
-                + "\n\nVendor No: " + NewRejectrecord.VendorNo
+            //    + "\n\nVendor: " + NewRejectrecord.Vendor
+            //    + "\n\nVendor No: " + NewRejectrecord.VendorNo
 
-                + "\n\nPart No: " + NewRejectrecord.PartNo
-                + "\nDescription: " + NewRejectrecord.PartDescription
-                + "\nQty: " + NewRejectrecord.QtyRejected
-                + "\nTotal Value: " + NewRejectrecord.TotalValue
+            //    + "\n\nPart No: " + NewRejectrecord.PartNo
+            //    + "\nDescription: " + NewRejectrecord.PartDescription
+            //    + "\nQty: " + NewRejectrecord.QtyRejected
+            //    + "\nTotal Value: " + NewRejectrecord.TotalValue
 
-                + "\n\nReturn Code: " + NewRejectrecord.ReasonCode
-                + "\nDescription: " + NewRejectrecord.ReturnDescription
+            //    + "\n\nReturn Code: " + NewRejectrecord.ReasonCode
+            //    + "\nDescription: " + NewRejectrecord.ReturnDescription
 
-                + "\nRaised By: " + NewRejectrecord.EmployeeName
+            //    + "\nRaised By: " + NewRejectrecord.EmployeeName
 
-                + "\n\nReplacement Required: " + NewRejectrecord.ReplacementRequired;
+            //    + "\n\nReplacement Required: " + NewRejectrecord.ReplacementRequired;
 
             //SmtpClient smtpClient = new SmtpClient("uk-leic1.ametek.com");
             //smtpClient.Send(mailMessage);
