@@ -1,4 +1,5 @@
-﻿
+﻿@model ThRejectApp.Models.tbRejectRecord
+
 <link rel="stylesheet" href="~/Content/input-form.css">
 
 <header>
@@ -23,59 +24,59 @@
             <h2>Vendor Information</h2>
             <div class="line">
                 <h3>Vendor Name:</h3>
-                <input type="text">
+                <input type="text" value="@Model.Vendor">
             </div>
             <div class="line line--sub-container">
                 <h3>Address:</h3>
                 <div class="line--sub">
-                    <input type="text" placeholder="Line one">
+                    <input type="text" value="@Model.AddressLine1" placeholder="Line one">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Line two">
+                    <input type="text" value="@Model.AddressLine2" placeholder="Line two">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="City">
+                    <input type="text" value="@Model.City" placeholder="City">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Post code">
+                    <input type="text" value="@Model.PostCode" placeholder="Post code">
                 </div>
                 <div class="line--sub">
-                    <input type="text" placeholder="Country code">
+                    <input type="text" value="@Model.CountryCode" placeholder="Country code">
                 </div>
             </div>
             <div class="line">
                 <h3>Buyer Name:</h3>
-                <input type="text">
+                <input type="text" value="@Model.BuyerName">
             </div>
             <div class="line">
                 <h3>Buyer Email:</h3>
-                <input type="text">
+                <input type="text" value="@Model.BuyerEmail">
             </div>
         </section>
         <section class="container-2">
             <h2>Reject Information</h2>
             <div class="line">
                 <h3>Reject Note</h3>
-                <input type="text">
+                <input type="text" value="@Model.RejectNo">
             </div>
             <div class="line">
                 <h3>Date Raise:</h3>
-                <input type="text">
+                <input type="date" value="@Model.DateRaised">
             </div>
             <div class="line">
                 <h3>PRO No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.ProNo">
             </div>
             <div class="line">
                 <h3>Replacement PO No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.ReplacementPo">
             </div>
             <div class="line">
                 <h3>Supplier RMA No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.RmaNo">
             </div>
             <div class="line line--checkbox">
-                <input type="text">
+                <input type="text" value="@Model.ShippingMethod">
                 <h3>Shipping Method:</h3>
                 <div class="checkbox-container checkbox-container--multi-option">
                     <span>DHL</span>
@@ -85,11 +86,11 @@
             </div>
             <div class="line">
                 <h3>Tracking No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.TrackingNo">
             </div>
             <div class="line">
                 <h3>Manufacturing No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.MoNo">
             </div>
         </section>
     </div>
@@ -98,19 +99,19 @@
             <h2>Part Information</h2>
             <div class="line">
                 <h3>Part No:</h3>
-                <input type="text">
+                <input type="text" value="@Model.PartNo">
             </div>
             <div class="line">
                 <h3>Description:</h3>
-                <input type="text">
+                <input type="text" value="@Model.PartDescription">
             </div>
             <div class="line">
                 <h3>Rejectioned Quanty:</h3>
-                <input type="text">
+                <input type="number" value="@Model.QtyRejected">
             </div>
             <div class="line">
                 <h3>Total Value (£):</h3>
-                <input type="text">
+                <input type="number" value="@Model.TotalValue">
             </div>
         </section>
 
@@ -128,11 +129,11 @@
             </div>
             <div class="line">
                 <h3>Description:</h3>
-                <input type="text">
+                <input type="text" value="@Model.ReturnDescription">
             </div>
             <div class="line">
                 <h3>Rejected PO No:</h3>
-                <input id="textbox-width" type="text">
+                <input id="textbox-width" type="text" value="@Model.RejectedPoNo">
             </div>
         </section>
 
@@ -147,11 +148,11 @@
     <div class="container-2 container-2--full-width">
         <div class="line">
             <h3>Date Goods Shipped</h3>
-            <input class="date-width-fix" type="date">
+            <input class="date-width-fix" type="date" value="@Model.DateGoodsShipped">
         </div>
         <div class="line line--checkbox line--checkbox-slider">
             <h3>Credit Note Recieved</h3>
-            <input type="checkbox">
+            <input type="checkbox" value="@Model.CreditNoteReceived">
             <div id="credit-recieved-slider" class="checkbox-container--slider">
                 <div class="green-slider"></div>
                 <div class="ball-slider"></div>
