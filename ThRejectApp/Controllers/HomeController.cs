@@ -17,11 +17,8 @@ namespace ThRejectApp.Controllers
         }
 
         [HttpPost]
-        public JsonResult SubmitForm(string test)
+        public JsonResult SubmitForm()
         {
-
-            string test2 = test;
-
             List<string> RequestKeys = Request.Form.AllKeys.ToList();
 
             RejectDbEntities DatabaseConnection = new RejectDbEntities();

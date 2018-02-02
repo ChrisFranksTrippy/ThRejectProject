@@ -123,6 +123,10 @@ footer p:last-child {
 	border: 1px solid;
 }
 
+.container-2--empty-filler {
+    display: none;
+}
+
 .cta {
 	display: flex;
 	justify-content: center;
@@ -191,5 +195,10 @@ footer p:last-child {
 	.container-2 {
 		width: 50%;
 	}
+
+    .container-2--empty-filler {
+        display: block;
+        border-width: 0px;
+    }
 
 }
